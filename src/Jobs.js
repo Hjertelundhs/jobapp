@@ -1,16 +1,19 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
+import { Paper, Typography } from '@material-ui/core/';
 import Job from './Job';
 
 export default function Jobs({ jobs }) {
+  console.log('Job is: ', jobs[0]);
   return (
-    <div className={'jobs'}>
-      <Typography variant="h3">Entry level software jobs go here!</Typography>
-      {jobs.map(job => (
-        <div className={'job'}>
-          <Job job={job} />
-        </div>
-      ))}
-    </div>
+    <Paper className={'jobs'}>
+      <Typography variant="h4" component="h1">
+        Entry level software jobs go here!
+      </Typography>
+      <Typography variant="body2" id={jobs.id}>
+        {jobs.map((job, i) => (
+          <Job key={i} job={job} />
+        ))}
+      </Typography>
+    </Paper>
   );
 }
