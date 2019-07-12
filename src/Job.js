@@ -1,11 +1,9 @@
 import React from 'react';
-import { Button, MobileStepper, Paper, Typography } from '@material-ui/core';
-import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
-import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
+import { Paper, Typography } from '@material-ui/core';
 
-export default function Job({ job }) {
+export default function Job({ job, onClick }) {
   return (
-    <Paper className={'job'}>
+    <Paper onClick={onClick} className={'job'}>
       <div>
         <Typography variant="h5">{job.title}</Typography>
         <Typography variant="h6">{job.company}</Typography>

@@ -27,10 +27,21 @@ body {
   color: #61dafb;
 }
 .job {
-  width: 100%;
+  width: 80%;
+  padding: 10px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+}
+
+.detail-logo {
+  height: 50px;
+  float: right;
+}
+
+.job:hover {
+  cursor: pointer;
+  color: blue;
 }
 
 @keyframes App-logo-spin {
